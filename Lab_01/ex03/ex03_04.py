@@ -1,8 +1,10 @@
-def tao_tuple_tu_lst(lst):
-    return tuple(lst)
+def truy_cap_phan_tu(tupe_data):
+    first_element = tupe_data[0]
+    last_element = tupe_data[-1]
+    return first_element, last_element
 
-input_list = input("Nhập danh sách các số,các nhau bằng dấu phẩy: ")
-numbers = list(map(int, input_list.split(',')))
+input_tuple = eval(input("Nhập tuple, ví dụ(1, 2,3): "))
+first, last = truy_cap_phan_tu(input_tuple)
 
-my_tuple= tao_tuple_tu_lst(numbers)
-print("lst sau đi đảo ngược: ",my_tuple)
+print("Phần tử đầu tiên:", first)
+print("Phần tử cuối cùng:", last)
